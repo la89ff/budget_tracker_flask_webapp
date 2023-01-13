@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemonade Stand Budget Tracker</title>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Lemonade Stand Budget Tracker</h1>
+
+    <!-- View all csv data -->
+    <h2><a href="/view"> View all budget items </a></h2>
+
+    <!-- View specific row of the data -->
+    <label for="view_id">Or enter the row of data you wish to view:</label>
+        <input type="search" id="searchbar" value="enter row number"/>
+        <button id="goto">Search</button>
+        <script>
+        document.getElementById("goto").addEventListener("click", goTo);
+        function goTo() {  
+                        var result = document.getElementById("searchbar").value;  
+                        window.location.href = '/view/'+result;
+                        }
+        </script>
+
+    <!-- Add to the data -->
+    <h2><a href="/add"> Add an entry </a></h2>
+
+</body>
+</html>

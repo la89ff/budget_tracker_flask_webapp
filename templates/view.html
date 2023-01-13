@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemonade Stand Budget Tracker</title>
+</head>
+<body>
+    <a href="/"> Take me back </a>
+    <h1>Budget tracker entries:</h1>
+    <!-- Loop through the reviews and provide details here -->
+    {% for row in data %}
+    <h1>___________________</h1>
+    <h2>Date: {{row['date']}}</h2>
+    <h5>Income or Expense: {{row['income or expense']}}</h5>
+    <h5>Amount: {{row['amount']}}</h5>
+    <h5>Description: {{row['description']}}</h5>
+    {% endfor %}
+</body>
+</html>
